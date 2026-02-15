@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine?</title>
+    <meta name="description" content="A romantic, minimalist Valentine's Day experience." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PAGE 1 : LANDING HERO                       -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="pageHero" class="page page--active">
+        <div class="page__particles" id="heroParticles"></div>
+        <div class="page__overlay page__overlay--hero"></div>
+
+        <div class="page__content">
+            <span class="eyebrow">15 February</span>
+            <h1 class="hero__heading">
+                Shrishti,<br />Will You Be My Valentine?
+            </h1>
+            <p class="hero__sub">
+                Hey Annie, every moment with you feels like a beautiful dream<br class="hide-mobile" />
+                I never want to wake up from.
+            </p>
+
+            <div class="hero__buttons">
+                <button id="btnYes" class="btn btn--primary">💖 Yes</button>
+                <button id="btnNo" class="btn btn--ghost">😢 No</button>
+            </div>
+        </div>
+
+        <!-- heart burst container -->
+        <div class="heart-burst" id="heartBurst"></div>
+        <!-- glow flash -->
+        <div class="glow-flash" id="glowFlash"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PAGE 2 : BLOOMING FLOWER                    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="pageFlower" class="page">
+        <div class="page__particles" id="flowerParticles"></div>
+        <div class="page__overlay page__overlay--flower"></div>
+
+        <!-- grass -->
+        <div class="grass">
+            <div class="grass__blade" style="left:5%;  height:80px;  animation-delay:0s"></div>
+            <div class="grass__blade" style="left:12%; height:110px; animation-delay:.5s"></div>
+            <div class="grass__blade" style="left:22%; height:70px;  animation-delay:1s"></div>
+            <div class="grass__blade" style="left:35%; height:95px;  animation-delay:.3s"></div>
+            <div class="grass__blade" style="left:48%; height:60px;  animation-delay:.8s"></div>
+            <div class="grass__blade" style="left:62%; height:100px; animation-delay:1.2s"></div>
+            <div class="grass__blade" style="left:75%; height:85px;  animation-delay:.6s"></div>
+            <div class="grass__blade" style="left:85%; height:105px; animation-delay:1.4s"></div>
+            <div class="grass__blade" style="left:93%; height:75px;  animation-delay:.2s"></div>
+        </div>
+
+        <div class="flower" id="flowerWrapper">
+            <!-- bloom -->
+            <div class="bloom" id="bloom">
+                <div class="petal petal--1"></div>
+                <div class="petal petal--2"></div>
+                <div class="petal petal--3"></div>
+                <div class="petal petal--4"></div>
+                <div class="petal petal--5"></div>
+                <div class="petal petal--6"></div>
+                <div class="petal petal--7"></div>
+                <div class="petal petal--8"></div>
+                <div class="bloom__core"></div>
+            </div>
+            <!-- stem below bloom -->
+            <div class="stem"></div>
+            <!-- leaves -->
+            <div class="leaf leaf--left"></div>
+            <div class="leaf leaf--right"></div>
+        </div>
+
+        <p class="flower__caption" id="flowerCaption">A flower that blooms just for you, Shrishti…</p>
+
+        <div class="flower__actions">
+            <button id="bloomAgain" class="btn btn--ghost btn--small flower-btn-hidden">↻ Bloom Again</button>
+            <button id="btnNext" class="btn btn--primary btn--small flower-btn-hidden">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PAGE 3 : LOVE MESSAGE                       -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="pageMessage" class="page">
+        <div class="page__particles" id="messageParticles"></div>
+        <div class="page__overlay page__overlay--message"></div>
+        <div class="floating-hearts" id="floatingHearts"></div>
+
+        <div class="page__content">
+            <span class="eyebrow">A Little Note For You</span>
+            <h2 class="msg__text" id="typewriterText"></h2>
+            <p class="msg__signature" id="msgSignature">— Forever yours, for my Annie ♥</p>
+
+            <button id="btnRestart" class="btn btn--ghost btn--small msg-btn-hidden" style="margin-top:2.5rem">
+                ↻ Start Over
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- MUSIC TOGGLE (global)                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle background music">
+        <span id="musicIcon">🔇</span>
+    </button>
+
+    <!-- page indicator dots -->
+    <nav class="page-dots" id="pageDots">
+        <span class="dot dot--active" data-page="0"></span>
+        <span class="dot" data-page="1"></span>
+        <span class="dot" data-page="2"></span>
+    </nav>
+
+    <audio id="bgMusic" loop preload="none">
+        <source src="https://cdn.pixabay.com/audio/2024/11/28/audio_3a595adeba.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
